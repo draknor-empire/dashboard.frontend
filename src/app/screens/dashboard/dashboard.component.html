@@ -1,0 +1,25 @@
+<div class="container-fluid">
+    <div class="container">
+        <div class="container text-lg-center">
+            <h1><img src="https://img.icons8.com/color/100/000000/dashboard--v1.png"/>Dashboard</h1>
+            <hr/>
+            <br/>
+        </div>
+        <div class="row">
+            <div class="col" *ngFor="let element of elementArray">
+                <pinned-modal
+                    [hyperlink]="'https://www.unrealengine.com/en-US'"
+                    [imageUrl]="'https://avatars.githubusercontent.com/u/6615749?s=200&v=4'"
+                    [linkName]="element"
+                    [modalTitle]="'Test Modal title'"
+                    [modalBody]="'modalBody'"
+                    [primaryButton]="'primaryButton'"
+                    [secondaryButton]="'secondaryButton'"
+                ></pinned-modal>
+            </div>
+            <div>
+        </div>
+</div>
+</div>
+
+

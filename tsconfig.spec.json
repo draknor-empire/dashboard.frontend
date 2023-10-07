@@ -1,0 +1,8 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  "compilerOptions": {
+    "types": ["jest", "node"],
+    "typeRoots": ["node_modules/@types"],
+    "esModuleInterop": true,
+  }
+}

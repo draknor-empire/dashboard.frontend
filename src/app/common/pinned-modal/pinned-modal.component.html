@@ -1,7 +1,6 @@
 
-<!-- pinned-modal.component.html -->
 <div>
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: transparent; border: none;">
     <img [src]="imageUrl" width="50" height="60">
   </button>
   <br>
@@ -13,15 +12,25 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">{{ modalTitle }} </h1>
+        <h1 class="modal-title fs-5" id="exampleModalLabel"><img [src]="imageUrl" width="50" height="60"><a [href]="hyperlink" style="text-decoration: none;padding: 2;">{{ modalTitle }}</a></h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        {{ modalBody }}
+        <table class="table">
+          <thead>
+            <tr>
+              <th *ngFor="let tableHeading of tableHeadingArray" scope="col"> {{ tableHeading }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let tableRow of tableRowArray">
+              <td>{{ tableRow }} </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"> {{ secondaryButton}} </button>
-        <button type="button" class="btn btn-primary">{{ primaryButton }} </button>
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal">{{ primaryButton }} </button>
       </div>
     </div>
   </div>

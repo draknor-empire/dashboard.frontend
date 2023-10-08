@@ -13,6 +13,8 @@ export class PinnedModalComponent {
   @Input() modalBody:string = 'modalBody';
   @Input() primaryButton:string = 'primaryButton';
   @Input() secondaryButton:string = 'secondaryButton';
+  @Input() tableHeadingArray = ['tableHeading'];
+  @Input() tableRowArray = ['tableRow'];
 
   showModal: boolean = false;
 

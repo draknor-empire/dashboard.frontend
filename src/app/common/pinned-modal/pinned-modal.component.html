@@ -6,7 +6,7 @@
     [attr.data-bs-target]="'#modal_' + uniqueId"
     style="background-color: transparent; border: none"
   >
-    <img [src]="imageUrl" width="50" height="60" />
+    <img [src]="imageUrl" [width]="imgWidth" [height]="imgHeight"/>
   </button>
   <br />
   <a [href]="hyperlink">{{ linkName }}</a>
@@ -24,7 +24,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="modalLabel">
-          <img [src]="imageUrl" width="50" height="60" /><a
+          <img [src]="imageUrl" [width]="imgWidth" [height]="imgHeight" style="padding: 10px;"/><a
             [href]="hyperlink"
             style="text-decoration: none; padding: 2"
             >{{ modalTitle }}</a

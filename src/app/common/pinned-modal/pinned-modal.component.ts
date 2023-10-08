@@ -17,6 +17,9 @@ export class PinnedModalComponent {
   @Input() tableHeadingArray = ['tableHeading'];
   @Input() tableRowArray = ['tableRow'];
   @Input() uniqueId:string = 'uniqueId';
+  @Input() imgWidth:string = '50';
+  @Input() imgHeight:string = '60';
+
   ngOnInit() {
     // Generate a unique ID using uuidv4()
     this.uniqueId = uuid();

@@ -20,6 +20,7 @@
       <div class="row">
         <div class="col" style="text-align: center">
           <pinned-modal
+            [imgWidth]="'70'"
             [hyperlink]="chaseLink"
             [imageUrl]="chaseImgLink"
             [linkName]="chaseBank"
@@ -31,6 +32,7 @@
         </div>
         <div class="col" style="text-align: center">
           <pinned-modal
+            [imgWidth]="'70'"
             [hyperlink]="tdLink"
             [imageUrl]="tdImgLink"
             [linkName]="tdBank"
@@ -50,7 +52,20 @@
             [tableHeadingArray]="amexHeadingArray"
             [tableRowArray]="amexCardsArray"
           ></pinned-modal>
-        </div>     
+        </div>
+        <div class="col" style="text-align: center">
+          <pinned-modal
+            [imgWidth]="'100'"
+            [imgHeight]="'60'"
+            [hyperlink]="capitalOneLink"
+            [imageUrl]="capitalOneImgLink"
+            [linkName]="capitalOne"
+            [modalTitle]="capitalOne"
+            [primaryButton]="okButtonText"
+            [tableHeadingArray]="capitalOneHeadingArray"
+            [tableRowArray]="capitalOneCardsArray"
+          ></pinned-modal>
+        </div>
     </div>
   </div>
 </div>

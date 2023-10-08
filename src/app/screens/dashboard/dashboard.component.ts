@@ -34,13 +34,20 @@ export class DashboardComponent {
   amex:string = 'American Express';
   amexLink:string = 'https://www.americanexpress.com/en-us/';
   amexImgLink:string = 'https://img.icons8.com/color/48/000000/amex.png';
-  amexCardsArray = ['Amex Gold', 'Amex Platinum'];
+  amexCardsArray = ['Amex Blue Cash'];
   amexHeadingArray = ['Card Name',"Closing Date", 'Due Date', "IsAutomated"];
 
   // Capital One
+  capitalOne:string = 'Capital One';
+  capitalOneLink:string = 'https://www.capitalone.com/';
+  capitalOneImgLink:string = 'https://1000logos.net/wp-content/uploads/2018/11/Capital-One-Logo.png';
+  capitalOneCardsArray = ['Capital One Venture'];
+  capitalOneHeadingArray = ['Card Name',"Closing Date", 'Due Date', "IsAutomated"];
   
 
   // Bills
+  billsHeadingText: string= "Bills"
+
   // Conservice Utilities
 
   // The Royal Worthington

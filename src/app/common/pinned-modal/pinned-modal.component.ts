@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { v4 as uuid } from 'uuid';
 
 @Component({
   selector: 'pinned-modal',
@@ -15,6 +16,11 @@ export class PinnedModalComponent {
   @Input() secondaryButton:string = 'secondaryButton';
   @Input() tableHeadingArray = ['tableHeading'];
   @Input() tableRowArray = ['tableRow'];
+  @Input() uniqueId:string = 'uniqueId';
+  ngOnInit() {
+    // Generate a unique ID using uuidv4()
+    this.uniqueId = uuid();
+  }
 
   showModal: boolean = false;
 
@@ -30,5 +36,6 @@ export class PinnedModalComponent {
     if (!this.showModal) {
       document.body.classList.remove('modal-open');
     }
-  }
+  } 
+
 }

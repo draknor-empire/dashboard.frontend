@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { v4 as uuid } from 'uuid';
 
 @Component({
   selector: 'dashboard',
@@ -9,6 +10,9 @@ export class DashboardComponent {
   
   okButtonText:string = "Ok"
  
+  generateUniqueId(): string {
+    return 'modal_' + uuid;
+  }
 
   // Finances
   finaceHeadingText: string= "Financial Services"
@@ -27,6 +31,12 @@ export class DashboardComponent {
   tdHeadingArray = ['Account Name','Statement Date'];
 
   // Amex
+  amex:string = 'American Express';
+  amexLink:string = 'https://www.americanexpress.com/en-us/';
+  amexImgLink:string = 'https://img.icons8.com/color/48/000000/amex.png';
+  amexCardsArray = ['Amex Gold', 'Amex Platinum'];
+  amexHeadingArray = ['Card Name',"Closing Date", 'Due Date', "IsAutomated"];
+
   // Capital One
   
 

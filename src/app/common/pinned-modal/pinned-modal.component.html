@@ -50,8 +50,8 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let tableRow of tableRowArray">
-              <td>{{ tableRow }}</td>
+            <tr *ngFor="let tableRow of tableRowArray" scope="col">
+              <td *ngFor="let item of tableRow">{{ item }}</td>
             </tr>
           </tbody>
         </table>

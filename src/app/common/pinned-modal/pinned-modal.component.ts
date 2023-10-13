@@ -14,8 +14,8 @@ export class PinnedModalComponent {
   @Input() modalBody:string = 'modalBody';
   @Input() primaryButton:string = 'primaryButton';
   @Input() secondaryButton:string = 'secondaryButton';
-  @Input() tableHeadingArray = ['tableHeading'];
-  @Input() tableRowArray = ['tableRow'];
+  @Input() tableHeadingArray: Array<string> = ['tableHeading'];
+  @Input() tableRowArray: Array<Array<string>> =[['tableRow']];
   @Input() uniqueId:string = 'uniqueId';
   @Input() imgWidth:string = '50';
   @Input() imgHeight:string = '60';
@@ -26,6 +26,7 @@ export class PinnedModalComponent {
   }
 
   showModal: boolean = false;
+
 
   openModal() {
     this.showModal = true;

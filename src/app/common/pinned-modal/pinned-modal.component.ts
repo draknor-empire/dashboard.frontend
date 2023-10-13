@@ -7,15 +7,14 @@ import { v4 as uuid } from 'uuid';
   styleUrls: ['pinned-modal.component.scss']
 })
 export class PinnedModalComponent {
-  @Input() hyperlink:string = 'hyperlink';
-  @Input() imageUrl:string = 'imageUrl';
-  @Input() linkName:string = 'linkName';
-  @Input() modalTitle:string = 'modalTitle';
-  @Input() modalBody:string = 'modalBody';
-  @Input() primaryButton:string = 'primaryButton';
-  @Input() secondaryButton:string = 'secondaryButton';
-  @Input() tableHeadingArray = ['tableHeading'];
-  @Input() tableRowArray = ['tableRow'];
+  @Input() hyperlink:string | null = null;
+  @Input() imageUrl:string | null = null;
+  @Input() linkName:string | null = null;
+  @Input() modalTitle:string | null = null;
+  @Input() modalBody:string | null = null;
+  @Input() primaryButton:string | null = null;
+  @Input() tableHeadingArray: Array<string> | null = null;
+  @Input() tableRowArray: Array<Array<string>> | null = null;
   @Input() uniqueId:string = 'uniqueId';
   @Input() imgWidth:string = '50';
   @Input() imgHeight:string = '60';
@@ -26,6 +25,7 @@ export class PinnedModalComponent {
   }
 
   showModal: boolean = false;
+
 
   openModal() {
     this.showModal = true;

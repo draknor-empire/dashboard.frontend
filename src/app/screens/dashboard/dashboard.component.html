@@ -9,7 +9,7 @@
       <hr />
       <br />
     </div>
-    <div class="container ">
+    <div class="container">
       <h3>
         {{ today }}
       </h3>
@@ -68,6 +68,29 @@
             [primaryButton]="okButtonText"
             [tableHeadingArray]="capitalOneHeadingArray"
             [tableRowArray]="capitalOneCardsArray"
+          ></pinned-modal>
+        </div>
+        <div class="col" style="text-align: center">
+          <pinned-modal
+            [imgWidth]="'100'"
+            [hyperlink]="macysLink"
+            [imageUrl]="macysImgLink"
+            [linkName]="macys"
+            [modalTitle]="macys"
+            [primaryButton]="okButtonText"
+            [tableHeadingArray]="macysHeadingArray"
+            [tableRowArray]="macysCardArray"
+          ></pinned-modal>
+        </div>
+        <div class="col" style="text-align: center">
+          <pinned-modal
+            [hyperlink]="targetLink"
+            [imageUrl]="targetImgLink"
+            [linkName]="target"
+            [modalTitle]="target"
+            [primaryButton]="okButtonText"
+            [tableHeadingArray]="targetHeadingArray"
+            [tableRowArray]="targetDataArray"
           ></pinned-modal>
         </div>
       </div>
@@ -165,6 +188,18 @@
             [tableRowArray]="amazonPrimeDataArray"
           ></pinned-modal>
         </div>
+        <div class="col" style="text-align: center">
+          <pinned-modal
+            [imgWidth]="'70'"
+            [hyperlink]="bjsLink"
+            [imageUrl]="bjsImgLink"
+            [linkName]="bjs"
+            [modalTitle]="bjs"
+            [primaryButton]="okButtonText"
+            [tableHeadingArray]="bjsHeadingArray"
+            [tableRowArray]="bjsDataArray"
+          ></pinned-modal>
+        </div>
       </div>
     </div>
     <br />
@@ -179,29 +214,6 @@
         </h3>
       </div>
       <div class="row">
-        <div class="col" style="text-align: center">
-          <pinned-modal
-            [imgWidth]="'100'"
-            [hyperlink]="macysLink"
-            [imageUrl]="macysImgLink"
-            [linkName]="macys"
-            [modalTitle]="macys"
-            [primaryButton]="okButtonText"
-            [tableHeadingArray]="macysHeadingArray"
-            [tableRowArray]="macysDataArray"
-          ></pinned-modal>
-        </div>
-        <div class="col" style="text-align: center">
-          <pinned-modal
-            [hyperlink]="targetLink"
-            [imageUrl]="targetImgLink"
-            [linkName]="target"
-            [modalTitle]="target"
-            [primaryButton]="okButtonText"
-            [tableHeadingArray]="targetHeadingArray"
-            [tableRowArray]="targetDataArray"
-          ></pinned-modal>
-        </div>
         <div class="col" style="text-align: center">
           <pinned-modal
             [imgHeight]="'70'"
@@ -224,18 +236,6 @@
             [primaryButton]="okButtonText"
             [tableHeadingArray]="aldiHeadingArray"
             [tableRowArray]="aldiDataArray"
-          ></pinned-modal>
-        </div>
-        <div class="col" style="text-align: center">
-          <pinned-modal
-            [imgWidth]="'70'"
-            [hyperlink]="bjsLink"
-            [imageUrl]="bjsImgLink"
-            [linkName]="bjs"
-            [modalTitle]="bjs"
-            [primaryButton]="okButtonText"
-            [tableHeadingArray]="bjsHeadingArray"
-            [tableRowArray]="bjsDataArray"
           ></pinned-modal>
         </div>
         <div class="col" style="text-align: center">
@@ -322,8 +322,6 @@
             [linkName]="cvs"
             [modalTitle]="cvs"
             [primaryButton]="okButtonText"
-            [tableHeadingArray]="cvsHeadingArray"
-            [tableRowArray]="cvsDataArray"
           ></pinned-modal>
         </div>
         <div class="col" style="text-align: center">
@@ -346,8 +344,6 @@
             [linkName]="consolidatedMedicalSupply"
             [modalTitle]="consolidatedMedicalSupply"
             [primaryButton]="consolidatedMedicalSupply"
-            [tableHeadingArray]="consolidatedMedicalSupplyHeadingArray"
-            [tableRowArray]="consolidatedMedicalSupplyDataArray"
           ></pinned-modal>
         </div>
       </div>

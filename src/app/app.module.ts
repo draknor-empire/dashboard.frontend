@@ -14,7 +14,7 @@ const routes: Routes = [
   // Existing routes...
   { path: '', component: DashboardComponent },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'sdc' || 'software-center', component: SoftwareCenterComponent },
+  { path: 'sdc', component: SoftwareCenterComponent },
 ];
 
 @NgModule({

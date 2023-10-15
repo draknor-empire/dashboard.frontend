@@ -72,7 +72,13 @@ export class DashboardComponent {
   chaseLink: string = 'https://www.chase.com/';
   chaseImgLink: string =
     'https://img.icons8.com/color/48/000000/chase-bank.png';
-  chaseHeadingArray = ['Card Name', 'Closing Date', 'Due Date', 'Autopay'];
+  chaseHeadingArray = [
+    'Card Name',
+    'Closing Date',
+    'Due Date',
+    'Autopay',
+    'Annual fee',
+  ];
   chaseCardsArray: Array<Array<string>> = [
     [
       'Freedom Sapphire',
@@ -87,6 +93,7 @@ export class DashboardComponent {
         15
       ).toLocaleDateString(),
       'Yes',
+      '$95',
     ],
     [
       'Freedom Unlimited',
@@ -101,6 +108,7 @@ export class DashboardComponent {
         15
       ).toLocaleDateString(),
       'Yes',
+      '0',
     ],
     [
       'Amazon Prime',
@@ -115,6 +123,7 @@ export class DashboardComponent {
         15
       ).toLocaleDateString(),
       'Yes',
+      '0',
     ],
   ];
 
@@ -341,7 +350,12 @@ export class DashboardComponent {
   amazonPrimeLink: string = 'https://www.amazon.com/gp/prime';
   amazonPrimeImgLink: string =
     'https://img.icons8.com/color/48/000000/amazon-prime.png';
-  amazonPrimeHeadingArray = ['Account Type', 'Due Date', 'Autopay'];
+  amazonPrimeHeadingArray = [
+    'Account Type',
+    'Due Date',
+    'Autopay',
+    'Cost w/ tax)',
+  ];
   amazonPrimeDataArray = [
     [
       'Amazon Prime',
@@ -352,6 +366,7 @@ export class DashboardComponent {
         1
       ).toLocaleDateString(),
       'Yes',
+      '$73.14',
     ],
   ];
 
@@ -360,7 +375,7 @@ export class DashboardComponent {
   bjsLink: string = 'https://www.bjs.com/';
   bjsImgLink: string =
     'https://seeklogo.com/images/B/bj-s-logo-25AB362B50-seeklogo.com.png';
-  bjsHeadingArray = ['Account Type', 'Due Date', 'Autopay'];
+  bjsHeadingArray = ['Account Type', 'Due Date', 'Autopay', 'Cost w/ tax)'];
   bjsDataArray = [
     [
       "BJ's Membership",
@@ -371,8 +386,42 @@ export class DashboardComponent {
         11
       ).toLocaleDateString(),
       'Yes',
+      '$58.30',
     ],
   ];
+
+  // Microsoft 365
+  microsoft365: string = 'Microsoft 365 Business Standard';
+  microsoft365Link: string = 'https://www.microsoft.com/en-us/microsoft-365';
+  microsoft365ImgLink: string =
+    'https://circyl.co.uk/wp-content/uploads/2023/02/logo_microsoft365.png';
+  microsoft365HeadingArray = [
+    'Account Type',
+    'Due Date',
+    'Autopay',
+    'Cost w/ tax)',
+  ];
+  microsoft365DataArray = [
+    [
+      'Microsoft 365 Business Standard',
+      this.calculateNextDate(
+        this.currentDate,
+        'annually',
+        21,
+        11
+      ).toLocaleDateString(),
+      'Yes',
+      '$159',
+    ],
+  ];
+
+  // githubCopilot
+  githubCopilot: string = 'Github Copilot';
+  githubCopilotLink: string = 'https://copilot.github.com/';
+  githubCopilotImgLink: string =
+    'https://www.podfeet.com/blog/wp-content/uploads/2021/09/GitHub-Copilot-logo-1040x650.png';
+  githubCopilotHeadingArray = ['Account Type', 'Due Date', 'Autopay'];
+  githubCopilotDataArray = [['Github Copilot', 'Free Trial', 'Yes']];
 
   // Shopping
   shoppingHeadingText: string = 'Shopping';

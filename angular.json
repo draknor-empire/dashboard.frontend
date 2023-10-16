@@ -87,7 +87,10 @@
           "options": {
             "jestConfig": ["jest.config.js"]
           }
-        }  
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
+        }
       }
     }
   },

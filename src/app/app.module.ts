@@ -12,6 +12,7 @@ import { SoftwareCenterComponent } from './screens/software-center/software-cent
 
 const routes: Routes = [
   // Existing routes...
+  { path: '', component: DashboardComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'sdc', component: SoftwareCenterComponent },
 ];

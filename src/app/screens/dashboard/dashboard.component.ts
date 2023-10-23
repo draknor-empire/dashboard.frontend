@@ -420,8 +420,8 @@ export class DashboardComponent {
   githubCopilotLink: string = 'https://copilot.github.com/';
   githubCopilotImgLink: string =
     'https://www.podfeet.com/blog/wp-content/uploads/2021/09/GitHub-Copilot-logo-1040x650.png';
-  githubCopilotHeadingArray = ['Account Type', 'Due Date', 'Autopay'];
-  githubCopilotDataArray = [['Github Copilot', 'Free Trial', 'Yes']];
+  githubCopilotHeadingArray = ['Account Type', 'Due Date', 'Autopay', 'Cost w/ tax)'];
+  githubCopilotDataArray = [['Github Copilot', 'Free Trial Ends - 11/7/2023', 'Yes', '$100']];
 
   // Shopping
   shoppingHeadingText: string = 'Shopping';

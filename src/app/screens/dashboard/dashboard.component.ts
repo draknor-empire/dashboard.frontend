@@ -1,6 +1,4 @@
-import { Statement } from '@angular/compiler';
 import { Component } from '@angular/core';
-import { v4 as uuid } from 'uuid';
 
 @Component({
   selector: 'dashboard',

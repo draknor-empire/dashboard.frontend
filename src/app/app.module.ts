@@ -9,6 +9,7 @@ import { PinnedModalModule } from './common/pinned-modal/pinned-modal.module';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { SoftwareCenterComponent } from './screens/software-center/software-center.component';
+import { DownloadPinModule } from './common/download-pin/download.module';
 
 const routes: Routes = [
   // Existing routes...
@@ -27,6 +28,7 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     PinnedModalModule,
+    DownloadPinModule,
     CommonModule,
     RouterModule.forRoot(routes),
   ],

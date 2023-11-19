@@ -1,0 +1,14 @@
+<div class="col" style="text-align: center">
+  <div class="card" style="width: 18rem" style="align-items: center">
+    <div>
+      <img [width]="imgWidth" [height]="imgWidth" [src]="softwareImgUrl" />
+      <div class="card-body">
+        <h5 class="card-title">{{ softwareName }}</h5>
+
+        <a [href]="downloadUrl" class="btn btn-primary" target="_blank">{{
+          downloadText
+        }}</a>
+      </div>
+    </div>
+  </div>
+</div>

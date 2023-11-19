@@ -26,213 +26,72 @@
       </div>
       <br />
       <div class="row">
-        <div class="col" style="text-align: center">
-          <div class="card" style="width: 18rem" style="align-items: center">
-            <div>
-              <img
-                width="100"
-                height="100"
-                src="https://img.icons8.com/fluency/100/visual-studio-code-2019.png"
-                alt="visual-studio-code-2019"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Visual Studio Code</h5>
-
-                <a
-                  href="https://code.visualstudio.com/download"
-                  class="btn btn-primary"
-                  target="_blank"
-                  >Download</a
-                >
-              </div>
-            </div>
-          </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="visualStudioCodeText"
+            [downloadUrl]="visualStudioCodeDownloadUrl"
+            [softwareImgUrl]="visualStudioCodeImgUrl"
+          >
+          </download-pin>
         </div>
-        <div class="col" style="text-align: center">
-          <div class="card" style="width: 18rem" style="align-items: center">
-            <div>
-              <img
-                width="100"
-                height="100"
-                src="https://img.icons8.com/color/480/000000/visual-studio.png"
-                alt="discord"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Visual Studio</h5>
-                <a
-                  href="https://visualstudio.microsoft.com/downloads/"
-                  class="btn btn-primary"
-                  target="_blank"
-                  >Download</a
-                >
-              </div>
-            </div>
-          </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="visualStudioText"
+            [downloadUrl]="visualStudioDownloadUrl"
+            [softwareImgUrl]="visualStudioImgUrl"
+          >
+          </download-pin>
         </div>
-        <div class="col" style="text-align: center">
-          <div class="card" style="width: 18rem" style="align-items: center">
-            <div>
-              <img
-                width="100"
-                height="100"
-                src="https://img.icons8.com/color/480/000000/intellij-idea.png"
-                alt="intelliJ"
-              />
-              <div class="card-body">
-                <h5 class="card-title">IntelliJ</h5>
-                <a
-                  href="https://www.jetbrains.com/idea/download/#section=windows"
-                  class="btn btn-primary"
-                  target="_blank"
-                  >Download</a
-                >
-              </div>
-            </div>
-          </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="intellijIdeaText"
+            [downloadUrl]="intellijIdeaDownloadUrl"
+            [softwareImgUrl]="intellijIdeaImgUrl"
+          >
+          </download-pin>
         </div>
-        <div class="col" style="text-align: center">
-          <div class="card" style="width: 18rem" style="align-items: center">
-            <div>
-              <img
-                width="100"
-                height="100"
-                src="https://img.icons8.com/color/480/000000/pycharm.png"
-                alt="discord"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Pycharm</h5>
-                <a
-                  href="https://www.jetbrains.com/pycharm/download/#section=windows"
-                  class="btn btn-primary"
-                  target="_blank"
-                  >Download</a
-                >
-              </div>
-            </div>
-          </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="pyCharmText"
+            [downloadUrl]="pyCharmDownloadUrl"
+            [softwareImgUrl]="pyCharmImgUrl"
+          >
+          </download-pin>
         </div>
-        <div class="col" style="text-align: center">
-          <div class="card" style="width: 18rem" style="align-items: center">
-            <div>
-              <img
-                width="100"
-                height="100"
-                src="https://img.icons8.com/color/480/000000/notepad-plus-plus.png"
-                alt="discord"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Notepad++</h5>
-                <a
-                  href="https://notepad-plus-plus.org/downloads/"
-                  class="btn btn-primary"
-                  target="_blank"
-                  >Download</a
-                >
-              </div>
-            </div>
-          </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="notepadPlusPlusText"
+            [downloadUrl]="notepadPlusPlusDownloadUrl"
+            [softwareImgUrl]="notepadPlusPlusImgUrl"
+          >
+          </download-pin>
         </div>
-        <div class="col" style="text-align: center">
-          <div class="card" style="width: 18rem" style="align-items: center">
-            <div>
-              <img
-                width="100"
-                height="100"
-                src="https://img.icons8.com/color/480/000000/jetbrains.png"
-                alt="discord"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Jetbrains Toolbox</h5>
-                <a
-                  href="https://www.jetbrains.com/toolbox-app/"
-                  class="btn btn-primary"
-                  target="_blank"
-                  >Download</a
-                >
-              </div>
-            </div>
-          </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="jetbrainsToolboxText"
+            [downloadUrl]="jetbrainsToolboxDownloadUrl"
+            [softwareImgUrl]="jetbrainsToolboxImgUrl"
+          >
+          </download-pin>
+        </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="pyCharmText"
+            [downloadUrl]="pyCharmDownloadUrl"
+            [softwareImgUrl]="pyCharmImgUrl"
+          >
+          </download-pin>
         </div>
       </div>
+      <br />
       <div class="row">
-        <div class="col" style="text-align: center">
-          <div class="card" style="width: 18rem" style="align-items: center">
-            <div>
-              <img
-                width="100"
-                height="100"
-                src="https://img.icons8.com/color/480/000000/python.png"
-                alt="discord"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Python x64</h5>
-                <a
-                  href="https://www.python.org/downloads/"
-                  class="btn btn-primary"
-                  target="_blank"
-                  >Download</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col" style="text-align: center">
-          <div class="card" style="width: 18rem" style="align-items: center">
-            <div>
-              <img
-                width="100"
-                height="100"
-                src="https://img.icons8.com/external-flaticons-flat-flat-icons/100/external-java-computer-programming-flaticons-flat-flat-icons.png"
-                alt="JDK"
-              />
-              <div class="card-body">
-                <h5 class="card-title">JDK</h5>
-                <a
-                  href="https://www.oracle.com/java/technologies/javase-jdk16-downloads.html"
-                  class="btn btn-primary"
-                  target="_blank"
-                  >Download</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col" style="text-align: center">
-          <div class="card" style="width: 18rem" style="align-items: center">
-            <div>
-              <img
-                width="100"
-                height="100"
-                src="https://img.icons8.com/color/100/nodejs.png"
-                alt="nodejs"
-              />
-              <div class="card-body">
-                <h5 class="card-title">nodejs</h5>
-                <a
-                  href="https://nodejs.org/en/download/"
-                  class="btn btn-primary"
-                  target="_blank"
-                  >Download</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col" style="text-align: center">
-          <div class="card" style="width: 18rem" style="align-items: center">
-            <div>
-                <img width="100" height="100" src="https://img.icons8.com/external-tal-revivo-light-tal-revivo/100/external-npm-a-package-manager-for-the-javascript-programming-language-logo-light-tal-revivo.png" alt="npm"/>"
-              <div class="card-body">
-                <h5 class="card-title">npm</h5>
-                <a
-                  href="https://www.npmjs.com/get-npm"
-                  class="btn btn-primary"
-                  target="_blank"
-                  >Download</a
-                >
-              </div>
-            </div>
-          </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="bluestacksText"
+            [downloadUrl]="bluestacksDownloadUrl"
+            [softwareImgUrl]="bluestacksImgUrl"
+          >
+          </download-pin>
         </div>
       </div>
     </div>
@@ -247,102 +106,53 @@
       </div>
       <br />
       <div class="row">
-        <div class="col" style="text-align: center">
-          <div class="card" style="width: 18rem" style="align-items: center">
-            <div>
-              <img
-                width="100"
-                height="100"
-                src="https://img.icons8.com/color/480/000000/zoom.png"
-                alt="zoom"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Zoom</h5>
-                <a
-                  href="https://zoom.us/download"
-                  class="btn btn-primary"
-                  target="_blank"
-                  >Download</a
-                >
-              </div>
-            </div>
-          </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="gitText"
+            [downloadUrl]="gitDownloadUrl"
+            [softwareImgUrl]="gitImgUrl"
+          >
+          </download-pin>
         </div>
-        <div class="col" style="text-align: center">
-          <div class="card" style="width: 18rem" style="align-items: center">
-            <div>
-              <img
-                width="100"
-                height="100"
-                src="https://img.icons8.com/color/480/000000/discord-logo.png"
-                alt="discord"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Discord</h5>
-                <a
-                  href="https://discord.com/download"
-                  class="btn btn-primary"
-                  target="_blank"
-                  >Download</a
-                >
-              </div>
-            </div>
-          </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="jdkText"
+            [downloadUrl]="jdkDownloadUrl"
+            [softwareImgUrl]="jdkImgUrl"
+          >
+          </download-pin>
         </div>
-      </div>
-    </div>
-    <br />
-    <br />
-    <div href="#FileCompression" class="container">
-      <div>
-        <h3 style="text-align: center; background-color: lightgoldenrodyellow">
-          <img src="https://img.icons8.com/color/48/000000/bank-building.png" />
-          {{ developerToolsText }}
-        </h3>
-      </div>
-      <br />
-      <div class="row">
-        <div class="col" style="text-align: center">
-          <div class="card" style="width: 18rem" style="align-items: center">
-            <div>
-              <img
-                width="100"
-                height="100"
-                src="https://img.icons8.com/color/480/000000/zoom.png"
-                alt="zoom"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Zoom</h5>
-                <a
-                  href="https://zoom.us/download"
-                  class="btn btn-primary"
-                  target="_blank"
-                  >Download</a
-                >
-              </div>
-            </div>
-          </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="nodejsText"
+            [downloadUrl]="nodejsDownloadUrl"
+            [softwareImgUrl]="nodejsImgUrl"
+          >
+          </download-pin>
         </div>
-        <div class="col" style="text-align: center">
-          <div class="card" style="width: 18rem" style="align-items: center">
-            <div>
-              <img
-                width="100"
-                height="100"
-                src="https://img.icons8.com/color/480/000000/discord-logo.png"
-                alt="discord"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Discord</h5>
-                <a
-                  href="https://discord.com/download"
-                  class="btn btn-primary"
-                  target="_blank"
-                  >Download</a
-                >
-              </div>
-            </div>
-          </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="npmText"
+            [downloadUrl]="npmDownloadUrl"
+            [softwareImgUrl]="npmImgUrl"
+          >
+          </download-pin>
+        </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="rubyText"
+            [downloadUrl]="rubyDownloadUrl"
+            [softwareImgUrl]="rubyImgUrl"
+          >
+          </download-pin>
+        </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="rustText"
+            [downloadUrl]="rustDownloadUrl"
+            [softwareImgUrl]="rustImgUrl"
+          >
+          </download-pin>
         </div>
       </div>
     </div>
@@ -362,100 +172,37 @@
       </div>
       <br />
       <div class="row">
-        <div class="col" style="text-align: center">
-          <div class="card" style="width: 18rem" style="align-items: center">
-            <img
-              width="100"
-              height="100"
-              src="https://img.icons8.com/officel/480/chrome.png"
-              alt="chrome"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Google Chrome</h5>
-              <a
-                href="https://www.google.com/chrome/"
-                class="btn btn-primary"
-                target="_blank"
-                >Download</a
-              >
-            </div>
-          </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="googleChromeText"
+            [downloadUrl]="googleChromeDownloadUrl"
+            [softwareImgUrl]="googleChromeImgUrl"
+          >
+          </download-pin>
         </div>
-        <div class="col" style="text-align: center">
-          <div class="card" style="width: 18rem" style="align-items: center">
-            <img
-              width="100"
-              height="100"
-              src="https://img.icons8.com/color/100/ms-edge-new.png"
-              alt="ms-edge-new"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Microsoft Edge</h5>
-              <a
-                href="https://www.microsoft.com/en-us/edge"
-                class="btn btn-primary"
-                target="_blank"
-                >Download</a
-              >
-            </div>
-          </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="mozillaFirefoxText"
+            [downloadUrl]="mozillaFirefoxDownloadUrl"
+            [softwareImgUrl]="mozillaFirefoxImgUrl"
+          >
+          </download-pin>
         </div>
-        <div class="col" style="text-align: center">
-          <div class="card" style="width: 18rem" style="align-items: center">
-            <img
-              width="100"
-              height="100"
-              src="https://img.icons8.com/color/480/000000/firefox.png"
-              alt="firefox"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Mozilla Firefox</h5>
-              <a
-                href="https://www.mozilla.org/en-US/firefox/new/"
-                class="btn btn-primary"
-                target="_blank"
-                >Download</a
-              >
-            </div>
-          </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="braveText"
+            [downloadUrl]="braveDownloadUrl"
+            [softwareImgUrl]="braveImgUrl"
+          >
+          </download-pin>
         </div>
-        <div class="col" style="text-align: center">
-          <div class="card" style="width: 18rem" style="align-items: center">
-            <img
-              width="100"
-              height="100"
-              src="https://img.icons8.com/color/480/000000/opera.png"
-              alt="opera"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Opera</h5>
-              <a
-                href="https://www.opera.com/"
-                class="btn btn-primary"
-                target="_blank"
-                >Download</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="col" style="text-align: center">
-          <div class="card" style="width: 18rem" style="align-items: center">
-            <img
-              width="100"
-              height="100"
-              src="https://img.icons8.com/color/480/000000/brave-web-browser.png"
-              alt="opera"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Brave</h5>
-              <a
-                href="https://brave.com/"
-                class="btn btn-primary"
-                target="_blank"
-                >Download</a
-              >
-            </div>
-          </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="libreWolfText"
+            [downloadUrl]="libreWolfDownloadUrl"
+            [softwareImgUrl]="libreWolfImgUrl"
+          >
+          </download-pin>
         </div>
       </div>
     </div>
@@ -472,62 +219,45 @@
       </div>
       <br />
       <div class="row">
-        <div class="col" style="text-align: center">
-          <div class="card" style="width: 18rem" style="align-items: center">
-            <img
-              width="100"
-              height="100"
-              src="https://img.icons8.com/color/480/000000/krita.png"
-              alt="chrome"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Krita</h5>
-              <a
-                href="https://krita.org/en/"
-                class="btn btn-primary"
-                target="_blank"
-                >Download</a
-              >
-            </div>
-          </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="gimpText"
+            [downloadUrl]="gimpDownloadUrl"
+            [softwareImgUrl]="gimpImgUrl"
+          >
+          </download-pin>
         </div>
-        <div class="col" style="text-align: center">
-          <div class="card" style="width: 18rem" style="align-items: center">
-            <img
-              width="100"
-              height="100"
-              src="https://img.icons8.com/fluency/100/blender-3d.png"
-              alt="blender-3d"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Blender</h5>
-              <a
-                href="https://www.blender.org/"
-                class="btn btn-primary"
-                target="_blank"
-                >Download</a
-              >
-            </div>
-          </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="inkscapeText"
+            [downloadUrl]="inkscapeDownloadUrl"
+            [softwareImgUrl]="inkscapeImgUrl"
+          >
+          </download-pin>
         </div>
-        <div class="col" style="text-align: center">
-          <div class="card" style="width: 18rem" style="align-items: center">
-            <img
-              width="100"
-              height="100"
-              src="https://img.icons8.com/color/480/000000/gimp.png"
-              alt="firefox"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Gimp</h5>
-              <a
-                href="https://www.gimp.org/"
-                class="btn btn-primary"
-                target="_blank"
-                >Download</a
-              >
-            </div>
-          </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="kritaText"
+            [downloadUrl]="kritaDownloadUrl"
+            [softwareImgUrl]="kritaImgUrl"
+          >
+          </download-pin>
+        </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="penPotText"
+            [downloadUrl]="penPotDownloadUrl"
+            [softwareImgUrl]="penPotImgUrl"
+          >
+          </download-pin>
+        </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="blenderText"
+            [downloadUrl]="blenderDownloadUrl"
+            [softwareImgUrl]="blenderImgUrl"
+          >
+          </download-pin>
         </div>
       </div>
     </div>
@@ -547,62 +277,127 @@
       </div>
       <br />
       <div class="row">
-        <div class="col" style="text-align: center">
-          <div class="card" style="width: 18rem" style="align-items: center">
-            <img
-              width="100"
-              height="100"
-              src="https://www.voidtools.com/Everything.ico"
-              alt="Everything"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Everything</h5>
-              <a
-                href="https://www.voidtools.com/"
-                class="btn btn-primary"
-                target="_blank"
-                >Download</a
-              >
-            </div>
-          </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="everthingText"
+            [downloadUrl]="everthingDownloadUrl"
+            [softwareImgUrl]="everthingImgUrl"
+          >
+          </download-pin>
         </div>
-        <div class="col" style="text-align: center">
-          <div class="card" style="width: 18rem" style="align-items: center">
-            <img
-              width="100"
-              height="100"
-              src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/100/external-teamviewer-is-proprietary-software-for-remote-control-desktop-sharing-logo-color-tal-revivo.png"
-              alt="teamviewer"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Teamviewer Meeting</h5>
-              <a
-                href="https://www.teamviewer.com/en/download/windows/"
-                class="btn btn-primary"
-                target="_blank"
-                >Download</a
-              >
-            </div>
-          </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="teamviewerText"
+            [downloadUrl]="teamviewerDownloadUrl"
+            [softwareImgUrl]="teamviewerImgUrl"
+          >
+          </download-pin>
         </div>
-        <div class="col" style="text-align: center">
-          <div class="card" style="width: 18rem" style="align-items: center">
-            <img
-              width="100"
-              height="100"
-              src="https://img.icons8.com/color/480/000000/gimp.png"
-              alt="firefox"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Gimp</h5>
-              <a
-                href="https://www.gimp.org/"
-                class="btn btn-primary"
-                target="_blank"
-                >Download</a
-              >
-            </div>
-          </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="obsStudioText"
+            [downloadUrl]="obsStudioDownloadUrl"
+            [softwareImgUrl]="obsStudioImgUrl"
+          >
+          </download-pin>
+        </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="mpvText"
+            [downloadUrl]="mpvDownloadUrl"
+            [softwareImgUrl]="mpvImgUrl"
+          >
+          </download-pin>
+        </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="rufusText"
+            [downloadUrl]="rufusDownloadUrl"
+            [softwareImgUrl]="rufusImgUrl"
+          >
+          </download-pin>
+        </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="vmwareWorkstationText"
+            [downloadUrl]="vmwareWorkstationDownloadUrl"
+            [softwareImgUrl]="vmwareWorkstationImgUrl"
+          >
+          </download-pin>
+        </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="ccleanerText"
+            [downloadUrl]="ccleanerDownloadUrl"
+            [softwareImgUrl]="ccleanerImgUrl"
+          >
+          </download-pin>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <download-pin
+            [softwareName]="vlcText"
+            [downloadUrl]="vlcDownloadUrl"
+            [softwareImgUrl]="vlcImgUrl"
+          >
+          </download-pin>
+        </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="nordvpnText"
+            [downloadUrl]="nordvpnDownloadUrl"
+            [softwareImgUrl]="nordvpnImgUrl"
+          >
+          </download-pin>
+        </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="puttyText"
+            [downloadUrl]="puttyDownloadUrl"
+            [softwareImgUrl]="puttyImgUrl"
+          >
+          </download-pin>
+        </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="raspberryPiImagerText"
+            [downloadUrl]="raspberryPiImagerDownloadUrl"
+            [softwareImgUrl]="raspberryPiImagerImgUrl"
+          >
+          </download-pin>
+        </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="sdCardFormatterText"
+            [downloadUrl]="sdCardFormatterDownloadUrl"
+            [softwareImgUrl]="sdCardFormatterImgUrl"
+          >
+          </download-pin>
+        </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="asusArmouryCrateText"
+            [downloadUrl]="asusArmouryCrateDownloadUrl"
+            [softwareImgUrl]="asusArmouryCrateImgUrl"
+          >
+          </download-pin>
+        </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="resourceHackerText"
+            [downloadUrl]="resourceHackerDownloadUrl"
+            [softwareImgUrl]="resourceHackerImgUrl"
+          >
+          </download-pin>
+        </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="notionText"
+            [downloadUrl]="notionDownloadUrl"
+            [softwareImgUrl]="notionImgUrl"
+          >
+          </download-pin>
         </div>
       </div>
     </div>
@@ -617,47 +412,109 @@
       </div>
       <br />
       <div class="row">
-        <div class="col" style="text-align: center">
-          <div class="card" style="width: 18rem" style="align-items: center">
-            <div>
-              <img
-                width="100"
-                height="100"
-                src="https://img.icons8.com/color/480/000000/zoom.png"
-                alt="zoom"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Zoom</h5>
-                <a
-                  href="https://zoom.us/download"
-                  class="btn btn-primary"
-                  target="_blank"
-                  >Download</a
-                >
-              </div>
-            </div>
-          </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="discordText"
+            [downloadUrl]="discordDownloadUrl"
+            [softwareImgUrl]="discordImgUrl"
+          >
+          </download-pin>
         </div>
-        <div class="col" style="text-align: center">
-          <div class="card" style="width: 18rem" style="align-items: center">
-            <div>
-              <img
-                width="100"
-                height="100"
-                src="https://img.icons8.com/color/480/000000/discord-logo.png"
-                alt="discord"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Discord</h5>
-                <a
-                  href="https://discord.com/download"
-                  class="btn btn-primary"
-                  target="_blank"
-                  >Download</a
-                >
-              </div>
-            </div>
-          </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="whatsAppText"
+            [downloadUrl]="whatsAppDownloadUrl"
+            [softwareImgUrl]="whatsAppImgUrl"
+          >
+          </download-pin>
+        </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="zoomText"
+            [downloadUrl]="zoomDownloadUrl"
+            [softwareImgUrl]="zoomImgUrl"
+          >
+          </download-pin>
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <div href="#Gaming" class="container">
+      <div>
+        <h3 style="text-align: center; background-color: lightgoldenrodyellow">
+          <img
+            height="60"
+            width="60"
+            src="https://upload.wikimedia.org/wikipedia/commons/9/94/Video-Game-Controller-Icon-D-Edit.svg"
+          />
+          {{ gamingPlatformText }}
+        </h3>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col">
+          <download-pin
+            [softwareName]="steamText"
+            [downloadUrl]="steamDownloadUrl"
+            [softwareImgUrl]="steamImgUrl"
+          >
+          </download-pin>
+        </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="epicGamesText"
+            [downloadUrl]="epicGamesDownloadUrl"
+            [softwareImgUrl]="epicGamesImgUrl"
+          >
+          </download-pin>
+        </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="unityText"
+            [downloadUrl]="unityDownloadUrl"
+            [softwareImgUrl]="unityImgUrl"
+          >
+          </download-pin>
+        </div>
+        <div class="col">
+          <download-pin
+            [imgWidth]="'100'"
+            [softwareName]="guildWarsText"
+            [downloadUrl]="guildWarsDownloadUrl"
+            [softwareImgUrl]="guildWarsImgUrl"
+          >
+          </download-pin>
+        </div>
+        <div class="col">
+          <download-pin
+            [imgWidth]="'100'"
+            [softwareName]="guildWars2Text"
+            [downloadUrl]="guildWars2DownloadUrl"
+            [softwareImgUrl]="guildWars2ImgUrl"
+          >
+          </download-pin>
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <div href="#FileCompression" class="container">
+      <div>
+        <h3 style="text-align: center; background-color: lightgoldenrodyellow">
+          <img src="https://img.icons8.com/color/48/000000/bank-building.png" />
+          {{ fileCompressionText }}
+        </h3>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col">
+          <download-pin
+            [softwareName]="winrarText"
+            [downloadUrl]="winrarDownloadUrl"
+            [softwareImgUrl]="winrarImgUrl"
+          >
+          </download-pin>
         </div>
       </div>
     </div>

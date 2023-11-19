@@ -1,6 +1,4 @@
-import { Statement } from '@angular/compiler';
 import { Component } from '@angular/core';
-import { v4 as uuid } from 'uuid';
 
 @Component({
   selector: 'dashboard',
@@ -231,6 +229,45 @@ export class DashboardComponent {
     ],
   ];
 
+  // Insurance
+  insuranceHeadingText: string = 'Insurance';
+
+  // Geico
+  geico: string = 'Geico';
+  geicoLink: string = 'https://www.geico.com/';
+  geicoImgLink: string =
+    'https://upload.wikimedia.org/wikipedia/commons/d/d2/Geico_logo.svg';
+  geicoHeadingArray = ['Account Type', 'Pay By Date', 'Due Date', 'Autopay'];
+  geicoDataArray = [
+    ['Geico: Auto Insurance', '10/26/2023', '11/26/2023', 'Yes'],
+    ['Geico: Renters Insurance', '', '', 'No'],
+  ];
+
+  // Aetna
+  aetna: string = 'Aetna';
+  aetnaLink: string = 'https://www.aetna.com/';
+  aetnaImgLink: string = 'https://upload.wikimedia.org/wikipedia/commons/8/8d/Aetna_logo.svg'
+  aetnaHeadingArray = ['Account Type', 'Due Date', 'Autopay'];
+  aetnaDataArray = [['Aetna: Health Insurance', 'None', 'Yes']];
+
+  // Delta Dental
+  deltaDental: string = 'Delta Dental';
+  deltaDentalLink: string = 'https://www.deltadental.com/';
+  deltaDentalImgLink: string =
+    'https://upload.wikimedia.org/wikipedia/commons/2/2f/Delta_Dental_logo.svg';
+  deltaDentalHeadingArray = ['Account Type', 'Due Date', 'Autopay'];
+  deltaDentalDataArray = [
+    [
+      'Delta Dental: Dental Insurance',
+      this.calculateNextDate(
+        this.currentDate,
+        'yearly',
+        1,
+      ).toLocaleDateString(),
+      'Yes',
+    ],
+  ];
+
   // Bills
   billsHeadingText: string = 'Bills';
 
@@ -420,8 +457,15 @@ export class DashboardComponent {
   githubCopilotLink: string = 'https://copilot.github.com/';
   githubCopilotImgLink: string =
     'https://www.podfeet.com/blog/wp-content/uploads/2021/09/GitHub-Copilot-logo-1040x650.png';
-  githubCopilotHeadingArray = ['Account Type', 'Due Date', 'Autopay', 'Cost w/ tax)'];
-  githubCopilotDataArray = [['Github Copilot', 'Free Trial Ends - 11/7/2023', 'Yes', '$100']];
+  githubCopilotHeadingArray = [
+    'Account Type',
+    'Due Date',
+    'Autopay',
+    'Cost w/ tax)',
+  ];
+  githubCopilotDataArray = [
+    ['Github Copilot Pro', '10/22/2025', 'Yes', '$0'],
+  ];
 
   // Shopping
   shoppingHeadingText: string = 'Shopping';

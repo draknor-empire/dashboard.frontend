@@ -93,6 +93,22 @@
           >
           </download-pin>
         </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="dockerText"
+            [downloadUrl]="dockerDownloadUrl"
+            [softwareImgUrl]="dockerImgUrl"
+          >
+          </download-pin>
+        </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="bluestacksText"
+            [downloadUrl]="bluestacksDownloadUrl"
+            [softwareImgUrl]="bluestacksImgUrl"
+          >
+          </download-pin>
+        </div>
       </div>
     </div>
     <br />
@@ -345,14 +361,6 @@
         </div>
         <div class="col">
           <download-pin
-            [softwareName]="nordvpnText"
-            [downloadUrl]="nordvpnDownloadUrl"
-            [softwareImgUrl]="nordvpnImgUrl"
-          >
-          </download-pin>
-        </div>
-        <div class="col">
-          <download-pin
             [softwareName]="puttyText"
             [downloadUrl]="puttyDownloadUrl"
             [softwareImgUrl]="puttyImgUrl"
@@ -396,6 +404,25 @@
             [softwareName]="notionText"
             [downloadUrl]="notionDownloadUrl"
             [softwareImgUrl]="notionImgUrl"
+          >
+          </download-pin>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <download-pin
+            [softwareName]="malwarebyteText"
+            [downloadUrl]="malwarebyteDownloadUrl"
+            [softwareImgUrl]="malwarebyteImgUrl"
+          >
+          </download-pin>
+        </div>
+        <div class="col">
+          <download-pin
+            [softwareName]="niniteText"
+            [downloadUrl]="niniteDownloadUrl"
+            [softwareImgUrl]="niniteImgUrl"
+            [imgWidth]="'100'"
           >
           </download-pin>
         </div>

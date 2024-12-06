@@ -136,7 +136,7 @@ export class DashboardComponent {
 
   // Amex
   amex: string = 'American Express';
-  amexLink: string = 'https://www.americanexpress.com/en-us/';
+  amexLink: string = 'https://www.americanexpress.com/en-us/account/login?inav=iNavLnkLog';
   amexImgLink: string = 'https://img.icons8.com/color/48/000000/amex.png';
   amexHeadingArray = ['Card Name', 'Closing Date', 'Due Date', 'Autopay'];
   amexCardsArray = [

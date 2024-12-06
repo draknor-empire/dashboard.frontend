@@ -54,6 +54,11 @@ export class SoftwareCenterComponent {
   bluestacksImgUrl = 'https://img.icons8.com/color/480/000000/bluestacks.png';
   bluestacksDownloadUrl = 'https://www.bluestacks.com/download.html';
 
+  // Docker
+  dockerText = 'Docker';
+  dockerImgUrl = 'https://img.icons8.com/color/480/docker.png';
+  dockerDownloadUrl = 'https://www.docker.com/';
+
   //*** Runtime Environments ***//
   runtimeEnvironmentsText = 'Runtime Environments';
 
@@ -190,11 +195,6 @@ export class SoftwareCenterComponent {
   vlcImgUrl = 'https://img.icons8.com/color/480/000000/vlc.png';
   vlcDownloadUrl = 'https://www.videolan.org/vlc/download-windows.html';
 
-  // NordVPN
-  nordvpnText = 'NordVPN';
-  nordvpnImgUrl = 'https://img.icons8.com/color/480/000000/nordvpn.png';
-  nordvpnDownloadUrl = 'https://nordvpn.com/download/windows/';
-
   // Putty
   puttyText = 'Putty';
   puttyImgUrl =
@@ -228,6 +228,16 @@ export class SoftwareCenterComponent {
     notionText = 'Notion';
     notionImgUrl = 'https://img.icons8.com/color/480/000000/notion--v2.png';
     notionDownloadUrl = 'https://www.notion.so/desktop';
+
+// Malwarebyte
+    malwarebyteText = 'Malwarebyte';
+    malwarebyteImgUrl = 'https://img.icons8.com/color/480/malwarebytes.png';
+    malwarebyteDownloadUrl = 'https://www.malwarebytes.com/';
+
+  // Ninite
+  niniteText = 'Ninite';
+  niniteImgUrl = 'https://diios.ie/wp-content/uploads/2021/10/Ninite.jpg';
+  niniteDownloadUrl = 'https://ninite.com/';
 
   //*** Messaging & Video ***//
   messagingVideoText = 'Messaging & Video';

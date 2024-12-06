@@ -22,49 +22,65 @@ export class DashboardComponent {
   today = this.formatDate(this.currentDate);
 
   calculateNextDate(
-    currentDate: Date,
+    baseDate: Date | undefined, // Allow passing a custom base date
     billFrequency: string,
     typicalDueDay: number,
     nextDueMonth?: number
   ): Date {
-    // Create a copy of the current date to avoid modifying it
-    const nextDueDate = new Date(currentDate);
-
-    // Define the mapping of bill frequencies to their corresponding time units
-    const frequencyMapping: { [key: string]: string } = {
-      monthly: 'M',
-      annually: 'Y',
-      // You can add more frequencies as needed
+    const nextDueDate = new Date(baseDate ?? new Date()); // Use baseDate or fallback to current date
+  
+    // Determine the frequency adjustment (monthly or yearly)
+    const frequencyMapping: { [key: string]: number } = {
+      monthly: 1,
+      annually: 12,
     };
-
-    // Get the time unit corresponding to the bill frequency
-    const timeUnit = frequencyMapping[billFrequency];
-
-    // If the current day of the month is after the typical due day or nextDueMonth is less than the current month, increment the month or year
+    const incrementMonths = frequencyMapping[billFrequency];
+  
+    // Check if we need to roll over to the next billing cycle
     if (
       nextDueDate.getDate() > typicalDueDay ||
-      (nextDueMonth && nextDueMonth <= nextDueDate.getMonth())
+      (billFrequency === 'annually' && nextDueMonth !== undefined && nextDueDate.getMonth() + 1 > nextDueMonth)
     ) {
-      if (timeUnit === 'M') {
-        nextDueDate.setMonth(nextDueDate.getMonth() + 1);
-      } else if (timeUnit === 'Y') {
-        nextDueDate.setFullYear(nextDueDate.getFullYear() + 1);
-      }
+      nextDueDate.setMonth(nextDueDate.getMonth() + incrementMonths);
     }
-
-    // Set the day of the month
+  
+    // For annual billing, if a specific due month is provided
+    if (billFrequency === 'annually' && nextDueMonth !== undefined) {
+      nextDueDate.setMonth(nextDueMonth - 1); // Zero-based month
+    }
+  
+    // Set the due day
     nextDueDate.setDate(typicalDueDay);
-
-    // If it's an annual bill and nextDueMonth is specified, set the month
-    if (timeUnit === 'Y' && nextDueMonth !== undefined) {
-      nextDueDate.setMonth(nextDueMonth - 1); // JavaScript months are zero-based
-    }
-
+  
     return nextDueDate;
   }
-
+  
+  
   // Finances
   financeHeadingText: string = 'Financial Services';
+   // Chase
+   quickenSimplifi: string = 'Quicken Simplifi';
+   quickenSimplifiLink: string = 'https://simplifi.quicken.com/';
+   quickenSimplifiImgLink: string =
+     'https://images.ctfassets.net/hfxittkcm76w/18iR7KSKx5mst1GX29gEc8/99c017419306033cf08029c39a1c0a39/Vector.svg';
+   quickenSimplifiHeadingArray = [
+     'Subscription Name',
+     'Due Date',
+     'Annual fee',
+   ];
+   quickenSimplifiArray: Array<Array<string>> = [
+    [
+      'Quicken Simplifi',
+      this.calculateNextDate(
+        new Date('2024-03-01'), // Custom base date
+        'annually',
+        5
+      ).toLocaleDateString(),
+      '$76.20',
+    ],
+  ];
+  
+ 
   // Chase
   chaseBank: string = 'Chase Bank';
   chaseLink: string = 'https://www.chase.com/';
@@ -80,51 +96,27 @@ export class DashboardComponent {
   chaseCardsArray: Array<Array<string>> = [
     [
       'Freedom Sapphire',
-      this.calculateNextDate(
-        this.currentDate,
-        'monthly',
-        18
-      ).toLocaleDateString(),
-      this.calculateNextDate(
-        this.currentDate,
-        'monthly',
-        15
-      ).toLocaleDateString(),
+      this.calculateNextDate(this.currentDate, 'monthly', 18).toLocaleDateString('en-US'), // Closing Date
+      this.calculateNextDate(this.currentDate, 'monthly', 15).toLocaleDateString('en-US'), // Due Date
       'Yes',
       '$95',
     ],
     [
       'Freedom Unlimited',
-      this.calculateNextDate(
-        this.currentDate,
-        'monthly',
-        18
-      ).toLocaleDateString(),
-      this.calculateNextDate(
-        this.currentDate,
-        'monthly',
-        15
-      ).toLocaleDateString(),
+      this.calculateNextDate(this.currentDate, 'monthly', 18).toLocaleDateString('en-US'), // Closing Date
+      this.calculateNextDate(this.currentDate, 'monthly', 15).toLocaleDateString('en-US'), // Due Date
       'Yes',
       '0',
     ],
     [
       'Amazon Prime',
-      this.calculateNextDate(
-        this.currentDate,
-        'monthly',
-        18
-      ).toLocaleDateString(),
-      this.calculateNextDate(
-        this.currentDate,
-        'monthly',
-        15
-      ).toLocaleDateString(),
+      this.calculateNextDate(this.currentDate, 'monthly', 18).toLocaleDateString('en-US'), // Closing Date
+      this.calculateNextDate(this.currentDate, 'monthly', 15).toLocaleDateString('en-US'), // Due Date
       'Yes',
       '0',
     ],
   ];
-
+  
   // TD Bank
   tdBank: string = 'TD Bank';
   tdLink: string = 'https://onlinebanking.tdbank.com/#/authentication/login';
@@ -322,7 +314,7 @@ export class DashboardComponent {
   verizon: string = 'Verizon';
   verizonLink: string = 'https://www.verizon.com/home/myverizon/';
   verizonImgLink: string =
-    'https://www.edigitalagency.com.au/wp-content/uploads/verizon-red-icon-black.png';
+    'https://s3.amazonaws.com/cms.ipressroom.com/354/files/20249/659efada3d6332d6155ce81c_New+Verizon+Logo+Pack/New+Verizon+Logo+Pack_e527459e-36de-4f84-a736-6cecc6701254-prv.jpg';
   verizonHeadingArray = [
     'Account Type',
     'Statement Closing Date',

@@ -12,10 +12,9 @@ import { SoftwareCenterComponent } from './screens/software-center/software-cent
 import { DownloadPinModule } from './common/download-pin/download.module';
 
 const routes: Routes = [
-  // Existing routes...
   { path: '', component: DashboardComponent },
-  { path: 'dashboard', component: DashboardComponent },
   { path: 'sdc', component: SoftwareCenterComponent },
+  { path: '**', redirectTo: '', pathMatch: 'full' }, // Redirect unknown paths to the dashboard
 ];
 
 @NgModule({

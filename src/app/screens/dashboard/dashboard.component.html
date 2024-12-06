@@ -25,6 +25,18 @@
         <div class="col" style="text-align: center">
           <pinned-modal
             [imgWidth]="'70'"
+            [hyperlink]="quickenSimplifiLink"
+            [imageUrl]="quickenSimplifiImgLink"
+            [linkName]="quickenSimplifi"
+            [modalTitle]="quickenSimplifi"
+            [primaryButton]="okButtonText"
+            [tableHeadingArray]="quickenSimplifiHeadingArray"
+            [tableRowArray]="quickenSimplifiArray"
+          ></pinned-modal>
+        </div>
+        <div class="col" style="text-align: center">
+          <pinned-modal
+            [imgWidth]="'70'"
             [hyperlink]="chaseLink"
             [imageUrl]="chaseImgLink"
             [linkName]="chaseBank"
@@ -184,6 +196,8 @@
         </div>
         <div class="col" style="text-align: center">
           <pinned-modal
+            [imgWidth]="'120'"
+            [imgHeight]="'70'"
             [hyperlink]="verizonLink"
             [imageUrl]="verizonImgLink"
             [linkName]="verizon"

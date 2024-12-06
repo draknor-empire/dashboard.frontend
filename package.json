@@ -1,7 +1,7 @@
 {
   "name": "my-website",
   "version": "0.0.0",
- "scripts": {
+"scripts": {
   "ng": "ng",
   "start": "ng serve",
   "serve": "ng serve",
@@ -9,7 +9,7 @@
   "build:prod": "ng build --configuration production",
   "watch": "ng build --watch --configuration development",
   "test": "ng test",
-  "serve:prod": "ng build --configuration production && npx http-server ./dist/my-website -p 8080 --proxy http://localhost:8080?",  
+  "serve:prod": "ng build --configuration production && npx http-server ./docs -p 8080 --proxy http://localhost:8080?",  
   "lint": "ng lint",
   "e2e": "ng e2e"
 },

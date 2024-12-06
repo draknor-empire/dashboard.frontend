@@ -14,7 +14,7 @@ import { DownloadPinModule } from './common/download-pin/download.module';
 const routes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'sdc', component: SoftwareCenterComponent },
-  { path: '**', redirectTo: '', pathMatch: 'full' }, // Redirect unknown paths to the dashboard
+  { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 
 @NgModule({
@@ -29,7 +29,7 @@ const routes: Routes = [
     PinnedModalModule,
     DownloadPinModule,
     CommonModule,
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes, { useHash: false }),
   ],
   exports: [RouterModule],
   bootstrap: [AppComponent],

@@ -221,8 +221,116 @@ export class DashboardComponent {
     ],
   ];
 
-  // Insurance
-  insuranceHeadingText: string = 'Insurance';
+  // Target
+  vanguard: string = 'Vanguard';
+  vanguardLink: string = 'https://logon.vanguard.com/logon?site=pi';
+  vanguardImgLink: string = 'https://upload.wikimedia.org/wikipedia/commons/8/81/Vanguard.svg';
+  vanguardHeadingArray = [
+    'Account Type',
+    'Statement Closing Date',
+    'Due Date',
+    'Autopay',
+  ];
+  vanguardDataArray = [
+    [
+      'Vanguard',
+      this.calculateNextDate(
+        this.currentDate,
+        'monthly',
+        17
+      ).toLocaleDateString(),
+      this.calculateNextDate(
+        this.currentDate,
+        'monthly',
+        14
+      ).toLocaleDateString(),
+      'Yes',
+    ],
+  ];
+
+  // EZ Pass NY
+  ezpass: string = 'EZ Pass NY';
+  ezpassLink: string = 'https://www.e-zpassny.com/vector/account/home/accountLogin.do?locale=en_US&from=Home';
+  ezpassImgLink: string = 'https://www.e-zpassny.com/vector/ny/app/images/logo_ezpass-2.gif';
+  ezpassHeadingArray = [
+    'Account Type',
+    'Statement Closing Date',
+    'Due Date',
+    'Autopay',
+  ];
+  ezpassDataArray = [
+    [
+      'EZ Pass NY',
+      this.calculateNextDate(
+        this.currentDate,
+        'monthly',
+        17
+      ).toLocaleDateString(),
+      this.calculateNextDate(
+        this.currentDate,
+        'monthly',
+        14
+      ).toLocaleDateString(),
+      'Yes',
+    ],
+  ];
+
+  // Experian
+  experian: string = 'Experian';
+  experianLink: string = 'https://usa.experian.com/login/index?br=exp&op=XXXX-LOG-PRI-XXX-LGM-HMPGABI-A8-EXP-VWIN-SEO-XXXXXX-XXXXXX-PHA1B';
+  experianImgLink: string = 'https://download.logo.wine/logo/Experian/Experian-Logo.wine.png';
+  experianHeadingArray = [
+    'Account Type',
+    'Statement Closing Date',
+    'Due Date',
+    'Autopay',
+  ];
+  experianDataArray = [
+    [
+      'Experian',
+      this.calculateNextDate(
+        this.currentDate,
+        'monthly',
+        17
+      ).toLocaleDateString(),
+      this.calculateNextDate(
+        this.currentDate,
+        'monthly',
+        14
+      ).toLocaleDateString(),
+      'Yes',
+    ],
+  ];
+
+  // Equifax
+  equifax: string = 'Equifax';
+  equifaxLink: string = 'https://usa.experian.com/login/index?br=exp&op=XXXX-LOG-PRI-XXX-LGM-HMPGABI-A8-EXP-VWIN-SEO-XXXXXX-XXXXXX-PHA1B';
+  equifaxImgLink: string = 'https://download.logo.wine/logo/Experian/Experian-Logo.wine.png';
+  equifaxHeadingArray = [
+    'Account Type',
+    'Statement Closing Date',
+    'Due Date',
+    'Autopay',
+  ];
+  equifaxDataArray = [
+    [
+      'Equifax',
+      this.calculateNextDate(
+        this.currentDate,
+        'monthly',
+        17
+      ).toLocaleDateString(),
+      this.calculateNextDate(
+        this.currentDate,
+        'monthly',
+        14
+      ).toLocaleDateString(),
+      'Yes',
+    ],
+  ];
+
+  // Insurance, Tax, Registrations
+  insuranceTaxRegistrationHeadingText: string = 'Insurance, Tax, Registration';
 
   // Geico
   geico: string = 'Geico';
@@ -259,6 +367,98 @@ export class DashboardComponent {
       'Yes',
     ],
   ];
+
+  //Assurant 
+  assurant: string = 'Assurant';
+  assurantLink: string = 'https://manage.myassurantpolicy.com/app/login';
+  assurantImgLink: string =
+    'https://manage.myassurantpolicy.com/assets/images/assurant_logo.svg';
+  assurantHeadingArray = ['Account Type', 'Due Date', 'Autopay'];
+  assurantDataArray = [
+    [
+      'Assurant: Renters Insurance',
+      this.calculateNextDate(
+        this.currentDate,
+        'yearly',
+        1,
+      ).toLocaleDateString(),
+      'Yes',
+    ],
+  ];
+
+  //PA Car Registration 
+  paCarRegistration: string = 'PA Car Registration';
+  paCarRegistrationLink: string = 'https://www.dot3e.penndot.gov/vehicle_services/vrlogin.jsp#top?2024122721334584=2024122721334584';
+  paCarRegistrationImgLink: string =
+    'https://blog.way.com/wp-content/uploads/2022/09/Depositphotos_140919958_L-1.jpg';
+  paCarRegistrationHeadingArray = ['Account Type', 'Due Date', 'Autopay'];
+  paCarRegistrationDataArray = [
+    [
+      'PA Car Registration',
+      this.calculateNextDate(
+        this.currentDate,
+        'yearly',
+        1,
+      ).toLocaleDateString(),
+      'Yes',
+    ],
+  ];
+
+
+//VSP vision Insurance 
+  vsp: string = 'VSP Vision Insurance';
+  vspLink: string = 'https://apias.vsp.com/as/authorization.oauth2?client_id=vsp-memberportal-ui&scope=openid%20auth_member_rest%20profile%20read:vc.find_a_doctor%20provider_view%20read:vc.memberusermanagement%20write:vc.memberusermanagement%20read:vc.memberbenefits%20write:vc.memberbenefits%20write:vc.find_a_doctor%20finance_view%20write:vc.finance%20read:vc.outofnetworkclaim%20write:vc.outofnetworkclaim%20ecom_view&redirect_uri=https://apias.vsp.com/acs2/redirect&response_type=code&state=vsp-memberportal-ui.d431012f-c4c4-11ef-b6d0-7313802c73e4';
+  vspImgLink: string =
+    'https://apias.vsp.com/assets/images/member/VSP_Logo.png';
+  vspHeadingArray = ['Account Type', 'Due Date', 'Autopay'];
+  vspDataArray = [
+    [
+      'VSP Vision Insurance',
+      this.calculateNextDate(
+        this.currentDate,
+        'yearly',
+        1,
+      ).toLocaleDateString(),
+      'Yes',
+    ],
+  ];
+
+  //Keystone Collections Group
+  keystoneCollectionsGroup: string = 'Keystone Collections Group';
+  keystoneCollectionsGroupLink: string = 'https://efile.keystonecollects.com/login';
+  keystoneCollectionsGroupImgLink: string =
+    'https://papi.keystonecollects.com/contentapi/images/keystone_logo.svg';
+  keystoneCollectionsGroupHeadingArray = ['Account Type', 'Due Date', 'Autopay'];
+  keystoneCollectionsGroupDataArray = [
+    [
+      'Keystone Collections Group',
+      this.calculateNextDate(
+        this.currentDate,
+        'yearly',
+        1,
+      ).toLocaleDateString(),
+      'Yes',
+    ],
+  ];
+
+   //Eyeconic
+   eyeconic: string = 'Eyeconic (Glasses)';
+   eyeconicLink: string = 'https://www.eyeconic.com/';
+   eyeconicImgLink: string =
+     'https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-6/279392078_2828152324154736_7757132813815513196_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Db0yC8pMjHYQ7kNvgFvsQFJ&_nc_zt=23&_nc_ht=scontent-lga3-2.xx&_nc_gid=AG-mN6jq1xiZ0NebrF_sHh0&oh=00_AYAPLDr1o6Bm-jg7WecF-XMAXizPwyR4shCCC6_lr07NOQ&oe=6775F92E';
+   eyeconicHeadingArray = ['Account Type', 'Due Date', 'Autopay'];
+   eyeconicDataArray = [
+     [
+       'Eyeconic (Glasses)',
+       this.calculateNextDate(
+         this.currentDate,
+         'yearly',
+         1,
+       ).toLocaleDateString(),
+       'Yes',
+     ],
+   ];
+ 
 
   // Bills
   billsHeadingText: string = 'Bills';

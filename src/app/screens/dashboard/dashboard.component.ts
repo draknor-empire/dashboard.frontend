@@ -304,8 +304,8 @@ export class DashboardComponent {
 
   // Equifax
   equifax: string = 'Equifax';
-  equifaxLink: string = 'https://usa.experian.com/login/index?br=exp&op=XXXX-LOG-PRI-XXX-LGM-HMPGABI-A8-EXP-VWIN-SEO-XXXXXX-XXXXXX-PHA1B';
-  equifaxImgLink: string = 'https://download.logo.wine/logo/Experian/Experian-Logo.wine.png';
+  equifaxLink: string = 'https://my.equifax.com/membercenter/#/login';
+  equifaxImgLink: string = 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Equifax.svg/371px-Equifax.svg.png';
   equifaxHeadingArray = [
     'Account Type',
     'Statement Closing Date',
@@ -329,6 +329,59 @@ export class DashboardComponent {
     ],
   ];
 
+   // TransUnion
+   transunion: string = 'TransUnion';
+   transunionLink: string = 'https://service.transunion.com/dss/login.page?PLACE_CTA=TransUnion:DSS:Login';
+   transunionImgLink: string = 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/TransUnion_logo.svg/1920px-TransUnion_logo.svg.png';
+   transunionHeadingArray = [
+     'Account Type',
+     'Statement Closing Date',
+     'Due Date',
+     'Autopay',
+   ];
+   transunionDataArray = [
+     [
+       'TransUnion',
+       this.calculateNextDate(
+         this.currentDate,
+         'monthly',
+         17
+       ).toLocaleDateString(),
+       this.calculateNextDate(
+         this.currentDate,
+         'monthly',
+         14
+       ).toLocaleDateString(),
+       'Yes',
+     ],
+   ];
+
+    // Icna Relief
+    icnaRelief: string = 'Icna Relief - Donate';
+    icnaReliefLink: string = 'https://icnarelief.org/donate/';
+    icnaReliefImgLink: string = 'https://upload.wikimedia.org/wikipedia/en/5/5d/ICNA.png';
+    icnaReliefHeadingArray = [
+      'Account Type',
+      'Statement Closing Date',
+      'Due Date',
+      'Autopay',
+    ];
+    icnaReliefDataArray = [
+      [
+        'TIcna Relief - Donate',
+        this.calculateNextDate(
+          this.currentDate,
+          'monthly',
+          17
+        ).toLocaleDateString(),
+        this.calculateNextDate(
+          this.currentDate,
+          'monthly',
+          14
+        ).toLocaleDateString(),
+        'Yes',
+      ],
+    ];
   // Insurance, Tax, Registrations
   insuranceTaxRegistrationHeadingText: string = 'Insurance, Tax, Registration';
 
@@ -656,6 +709,21 @@ export class DashboardComponent {
     'Cost w/ tax)',
   ];
   githubCopilotDataArray = [
+    ['Github Copilot Pro', '10/22/2025', 'Yes', '$0'],
+  ];
+
+  // My Hyundai
+  myHyundai: string = 'My Hyundai';
+  myHyundaiLink: string = 'https://owners.hyundaiusa.com/us/en';
+  myHyundaiImgLink: string =
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Hyundai_Motor_Company_logo.svg/799px-Hyundai_Motor_Company_logo.svg.png';
+    myHyundaiHeadingArray = [
+    'Account Type',
+    'Due Date',
+    'Autopay',
+    'Cost w/ tax)',
+  ];
+  myHyundaiDataArray = [
     ['Github Copilot Pro', '10/22/2025', 'Yes', '$0'],
   ];
 
